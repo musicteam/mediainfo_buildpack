@@ -14,9 +14,9 @@ https://github.com/code-pms/mediainfo-buildpack.git
 Or use the following command via heroku CLI:
 
 ```
-heroku buildpacks:add https://github.com/code-pms/mediainfo-buildpack.git
+heroku buildpacks:add https://github.com/musicteam/mediainfo_buildpack.git
 ```
 
 ## Github Actions
 
-Use [github actions](https://github.com/code-pms/mediainfo_buildpack/actions/workflows/mediainfo.yml) to auto generate mediainfo tar directly from the source.
+Use [github actions](https://github.com/musicteam/mediainfo_buildpack.git/actions/workflows/mediainfo.yml) to auto generate mediainfo tar directly from the source.
