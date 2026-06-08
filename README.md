@@ -7,7 +7,7 @@ MediaInfo - https://mediaarea.net/en/MediaInfo
 Add the following link in your `.buildpacks` file:
 
 ```
-https://github.com/code-pms/mediainfo-buildpack.git
+https://github.com/musicteam/mediainfo_buildpack.git
 
 ```
 
