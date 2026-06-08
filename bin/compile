@@ -14,7 +14,7 @@ indent() {
 
 disp "Unpacking mediainfo"
 cd $BUILD_DIR
-curl -fsSL "https://github.com/musicteam/mediainfo_buildpack/blob/master/mediainfo.tar.gz" | tar xzf - | indent
+curl -fsSL "https://github.com/musicteam/mediainfo_buildpack/raw/refs/heads/master/mediainfo.tar.gz" | tar xzf - | indent
 
 disp "Creating PROFILE_PATH"
 PROFILE_PATH="$BUILD_DIR/.profile.d"
