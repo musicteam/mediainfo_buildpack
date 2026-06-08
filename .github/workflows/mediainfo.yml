@@ -20,7 +20,7 @@ jobs:
       - name: Downloading required packages
         continue-on-error: true
         run: |
-          wget -qq https://mediaarea.net/repo/deb/repo-mediaarea_1.0-20_all.deb && sudo dpkg -i repo-mediaarea_1.0-20_all.deb
+          wget -qq https://mediaarea.net/repo/deb/repo-mediaarea_1.0-27_all.deb && sudo dpkg -i repo-mediaarea_1.0-27_all.deb
           sudo apt-get update && sudo apt-get install --download-only -y libmms0 mediainfo libzen0v5
           mkdir -p tempx vendor
           sudo mv /var/cache/apt/archives/*deb tempx
@@ -36,6 +36,11 @@ jobs:
       - name: Compressing Output
         continue-on-error: true
         run: |
-          tar -zcvf mediainfo_22.05.tar.gz vendor
-          curl --upload-file ./mediainfo_22.05.tar.gz https://transfer.sh/mediainfo_22.05.tar.gz
+          tar -zcvf mediainfo.tar.gz vendor
           echo "    Done."
+
+      - name: Uploading artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mediainfo-tar
+          path: mediainfo.tar.gz
